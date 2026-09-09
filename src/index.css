@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --font-sora: "Sora", sans-serif;
+    --font-code: "Source Code Pro", monospace;
+    --font-grotesk: "Space Grotesk", sans-serif;
+    color-scheme: dark;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+@layer base {
+    body {
+        @apply font-sans bg-n-8 text-n-1 text-base;
+    }
+}
+
+.rotate-45 {
+    @apply rotate-[45deg];
+}
+
+.rotate-90 {
+    @apply rotate-[90deg];
+}
+
+.rotate-135 {
+    @apply rotate-[135deg];
+}
+
+.rotate-180 {
+    @apply rotate-[180deg];
+}
+
+.rotate-225 {
+    @apply rotate-[225deg];
+}
+
+.rotate-270 {
+    @apply rotate-[270deg];
+}
+
+.rotate-315 {
+    @apply rotate-[315deg];
+}
+
+.rotate-360 {
+    @apply rotate-[360deg];
+}
+
+.-rotate-45 {
+    @apply rotate-[-45deg];
+}
+
+.-rotate-90 {
+    @apply rotate-[-90deg];
+}
+
+.-rotate-135 {
+    @apply rotate-[-135deg];
+}
+
+.-rotate-180 {
+    @apply rotate-[-180deg];
+}
+
+.-rotate-225 {
+    @apply rotate-[-225deg];
+}
+
+.-rotate-270 {
+    @apply rotate-[-270deg];
+}
+
+.-rotate-315 {
+    @apply rotate-[-315deg];
+}
+
+.-rotate-360 {
+    @apply rotate-[-360deg];
+}
+.dark-gradient {
+    background-image: url('assets/hero/heroBackground.png?url'); /* Replace with your image path */
+    background-size: cover; /* Cover ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from tiling */
+    height: 100%; /* Adjust as needed, 100vh makes it full viewport height */
+    width: 100%; /* Full width */
+}
+.grid-container {
+    @apply w-full h-full border border-black-300 bg-black-200 rounded-lg sm:p-7 p-4 flex flex-col gap-5;
+}
+
+.grid-headtext {
+    @apply text-xl font-semibold mb-2 text-white font-generalsans;
+}
+
+.grid-subtext {
+    @apply text-[#afb0b6] text-base font-generalsans;
+}
+.c-space {
+    @apply sm:px-10 px-5;
+}
+/* contact section */
+.contact-container {
+    @apply max-w-xl relative z-10 sm:px-10 px-5 ;
+}
+
+.field-label {
+    @apply text-lg text-white-600;
+}
+
+.field-input {
+    @apply w-full bg-black-300 px-5 py-2 min-h-14 rounded-lg placeholder:text-white-500 text-lg text-white-800 shadow-black-200 shadow-2xl focus:outline-none;
+}
+
+.field-btn {
+    @apply bg-black-500 px-5 py-2 min-h-12 rounded-lg shadow-black-200 shadow-2xl flex justify-center items-center text-lg text-white gap-3;
+}
+
+.field-btn_arrow {
+    @apply w-2.5 h-2.5 object-contain invert brightness-0;
+}
+.head-text {
+    @apply sm:text-4xl text-3xl font-semibold text-white;
+}
+.copy-container {
+    @apply cursor-pointer flex justify-center items-center gap-2;
+}
