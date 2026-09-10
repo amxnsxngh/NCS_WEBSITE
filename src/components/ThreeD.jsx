@@ -6,17 +6,17 @@ const ThreeD = (props) => {
     const { nodes, materials } = useGLTF('/3d-logo.glb');
     const groupRef = useRef();
 
-    // Automatically rotate the model
-    useFrame(() => {
+    // The model's 90-degree X tilt makes local Z rotation a left-to-right turn.
+    useFrame(({ clock }) => {
         if (groupRef.current) {
-            groupRef.current.rotation.z += 0.009; // Adjust rotation speed as needed
+            groupRef.current.rotation.z = Math.sin(clock.elapsedTime * 0.8) * (Math.PI / 6);
         }
     });
 
-    // Set metallic and roughness properties for a more metallic look
+    // Keep colours visible under ambient light while retaining some metallic shine.
     const applyMetallicProperties = (material) => {
-        material.metalness = 1;  // Full metallic
-        material.roughness = 0.5; // Low roughness for shiny effect
+        material.metalness = 0.5;
+        material.roughness = 0.5;
     };
 
     // Apply metallic properties to materials

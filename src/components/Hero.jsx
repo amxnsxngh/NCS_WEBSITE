@@ -51,7 +51,7 @@ const Hero = () => {
                                     scale={[89, 89, 89]}
                                 />
                             </ModelCamera>
-                            <ambientLight intensity={1.2} />
+                            <ambientLight intensity={1.5} />
                             <directionalLight position={[0, 0, 10]} intensity={1} />
                         </Suspense>
                     </Canvas>

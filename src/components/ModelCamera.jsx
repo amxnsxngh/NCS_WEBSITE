@@ -13,12 +13,10 @@ const ModelCamera = ({children}) => {
                 ref={orbitRef}  // Ref for programmatic control (if needed)
                 enableZoom={true}  // Enable zooming
                 enablePan={false}  // Disable panning
+                enableRotate={false} // Keep the front visible during the automatic swing
                 minDistance={10}   // Minimum zoom distance (adjust as needed)
                 maxDistance={200}  // Maximum zoom distance (adjust as needed)
                 target={[0, 0, 0]}  // Center around the HackerRoom model
-                maxPolarAngle={Math.PI}  // Allow vertical rotation (full up/down rotation)
-                minAzimuthAngle={-Infinity}  // Allow unlimited horizontal rotation
-                maxAzimuthAngle={Infinity}   // Allow unlimited horizontal rotation
             />
         </group>
     )
