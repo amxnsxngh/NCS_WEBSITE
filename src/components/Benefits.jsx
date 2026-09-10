@@ -3,7 +3,6 @@ import Heading from "./Heading.jsx";
 import { benefits } from "../constants/index.js";
 import { GradientLight } from "./design/Benefits";
 import ClipPath from "../assets/svg/ClipPath.jsx";
-import {BottomLine} from "./design/Hero.jsx";
 
 const Benefits = () => {
     // Scroll to the products section
@@ -22,7 +21,8 @@ const Benefits = () => {
                             key={item.id}
                             className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem] ml-auto mr-auto"
                             style={{
-                                backgroundImage: `url(${item.backgroundUrl})`,
+                                // Quote SVG data URLs so gradient parentheses remain valid CSS.
+                                backgroundImage: `url("${item.backgroundUrl}")`,
                             }}
                         >
                             <div className="relative z-2 flex flex-col min-h-[15rem] p-[2.4rem] pointer-events-none ">
@@ -48,10 +48,10 @@ const Benefits = () => {
                                 </div>
                             </div>
 
-                            <ClipPath />
                         </div>
                     ))}
                 </div>
+                <ClipPath />
             </div>
 
         </Section>
